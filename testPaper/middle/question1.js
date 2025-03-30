@@ -23,5 +23,16 @@
  */
 
 export const createUserActionString = (object) => {
-  //ここに記述
+  return "";
+  /*[
+  {userName:"田中", action:"挨拶"},
+  {userName:"山田", action:"洗濯"},
+  {userName:"佐藤",action:""}
+]
+  if(){
+    console.log(`${userName}が${action}しました`)
+  }
+  else{
+    console.log(`${userName}は何もしませんでした`)
+  };*/
 };
