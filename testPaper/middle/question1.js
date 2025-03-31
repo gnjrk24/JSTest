@@ -23,16 +23,13 @@
  */
 
 export const createUserActionString = (object) => {
-  return "";
-  /*[
-  {userName:"田中", action:"挨拶"},
-  {userName:"山田", action:"洗濯"},
-  {userName:"佐藤",action:""}
-]
-  if(){
-    console.log(`${userName}が${action}しました`)
+  if (!object.userName && !object.action) {
+    return "名無しさんは何もしませんでした";
+  } else if (!object.userName) {
+    return `名無しさんが${object.action}しました`;
+  } else if (!object.action) {
+    return `${object.userName}さんは何もしませんでした`;
+  } else {
+    return `${object.userName}さんが${object.action}しました`;
   }
-  else{
-    console.log(`${userName}は何もしませんでした`)
-  };*/
 };
