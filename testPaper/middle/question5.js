@@ -12,5 +12,14 @@
  */
 
 export const changeElementText = (elementId, text) => {
-  //ここに記述
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.textContent = text;
+  } else {
+    const tag = document.createElement("div");
+    tag.id = elementId;
+    tag.textContent = text;
+
+    document.body.appendChild(tag);
+  }
 };
