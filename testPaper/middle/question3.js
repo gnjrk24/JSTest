@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // - 問題3: 合計値、平均値を出そう
-//    要素が数値の配列を引数として受け取り、
+//    要素が数値の配列を引数として受け取りgit 、
 //    平均値(小数点第一位で四捨五入)、合計値を計算した結果のオブジェクトを返す関数を作ってください。
 
 // 引数の例
@@ -14,5 +14,8 @@
  *  @return {{sum:number,average:number}}
  */
 export const sumAndAverage = (array) => {
-  //ここに記述
+  const summary = array.reduce(function (sum, element) {
+    return sum + element;
+  }, 0);
+  return Math.round(summary / array.length);
 };
