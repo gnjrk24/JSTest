@@ -17,5 +17,5 @@ export const sumAndAverage = (array) => {
   const summary = array.reduce(function (sum, element) {
     return sum + element;
   }, 0);
-  return Math.round(summary / array.length);
+  return { sum: summary, average: Math.round(summary / array.length) };
 };
