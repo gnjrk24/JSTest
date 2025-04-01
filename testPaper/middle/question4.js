@@ -17,5 +17,10 @@
  *  @return {(string|number)[]}
  */
 export const toggleArrayElement = (array, ele) => {
-  //ここに記述
+  if (array.includes(ele)) {
+    const findIndex = array.indexOf(ele);
+    return array.toSpliced(findIndex, 1);
+  } else {
+    return [...array, ele];
+  }
 };
