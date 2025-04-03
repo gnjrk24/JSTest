@@ -23,5 +23,13 @@
  */
 
 export const createUserActionString = (object) => {
-  //ここに記述
+  if (!object.userName && !object.action) {
+    return "名無しさんは何もしませんでした";
+  } else if (!object.userName) {
+    return `名無しさんが${object.action}しました`;
+  } else if (!object.action) {
+    return `${object.userName}さんは何もしませんでした`;
+  } else {
+    return `${object.userName}さんが${object.action}しました`;
+  }
 };
