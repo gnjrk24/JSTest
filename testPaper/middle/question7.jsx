@@ -7,11 +7,20 @@
 // 2. userNames全員分を問6のコンポーネントを使って表示してください。
 // 3. もしuserNamesの要素の中に"自分"という文字列が渡ってきたら表示しないようにしましょう。
 // 4. keyにはindexをつけましょう。
-
+import React from "react";
+import Question from "./question6";
 /**
  * @param {{userNames:string[]}} props
  * @returns {ReactNode}
  */
-const TestComponent2 = ({ userNames }) => {};
+const TestComponent2 = ({ userNames }) => {
+  return (
+    <ul>
+      {userNames.map((name, index) => {
+        return name === "自分" ? "" : <Question userName={name} key={index} />;
+      })}
+    </ul>
+  );
+};
 
 export default TestComponent2;
